@@ -50,15 +50,16 @@ $e-color-shade-10: #F0F0F0;
 $e-color-shade-30: #969696;
 
 // Brand colors
-$e-color-primary: #67C088;
-$e-color-secondary: #0089AE;
-$e-color-tertiairy: #007E63;
-$e-color-4: #F0F2F4;
+$e-color-primary: #69BE28; //yellow green
+$e-color-secondary: #6D6E71; // Dark Gray
+$e-color-tertiairy: #78D92E;
 
-$e-color-title: darken($e-color-secondary, 15%);
-$e-color-text: darken(#86A6AE, 10%);
+$e-color-button: $e-color-tertiairy;
 
-$e-color-link: #004D62;
+$e-color-title: #333C4E;
+$e-color-text: #7E8890;
+
+$e-color-link: $e-color-tertiairy;
 $e-color-link-active: $e-color-primary;
 
 $e-color-info: #53C1FA;

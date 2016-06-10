@@ -33,10 +33,9 @@
 }
 
 .e-btn {
-    @include e-btn-style($e-color-primary);
+    @include e-btn-style($e-color-tertiairy);
     display: inline-block;
     vertical-align: top;
-    // margin: 1.5rem 1rem;
     margin-bottom: 1rem;
     margin-right: 1rem;
     padding: .75rem 1.5rem;
@@ -101,8 +100,8 @@
 .e-btn--disabled,
 .e-btn--disabled:hover {
     transform: translateY(0px);
-    background: lighten($e-color-tertiairy, 20%);
-    box-shadow: 0 2px 0 0 darken(lighten($e-color-tertiairy, 20%), 5%);
+    background: lighten($e-color-button, 20%);
+    box-shadow: 0 2px 0 0 darken(lighten($e-color-button, 20%), 5%);
     color: lighten($e-color-tertiairy, 10%);
     cursor: default;
 }

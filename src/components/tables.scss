@@ -75,7 +75,7 @@
         border-bottom: 1px solid $e-color-divider;
         width: 100%;
         &:hover {
-            background: lighten($e-color-4, 3%);
+            background: lighten($e-color-secondary, 30%);
             box-shadow: 0 6px 16px -6px rgba($e-color-shade-30, .25);
         }
     }
