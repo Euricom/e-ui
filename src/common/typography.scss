@@ -51,6 +51,16 @@ $e-base-font-size: $e-sb;
     font-weight: 300;
     line-height: $e-base-line-height * 3;
     margin-bottom: $e-base-line-height * 2;
+    position: relative;
+    &:after {
+        background: $e-color-tertiairy;
+        bottom: -10px;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 40px;
+    }
 }
 
 %e-h-2 {
@@ -59,6 +69,16 @@ $e-base-font-size: $e-sb;
     font-weight: 300;
     line-height: $e-base-line-height * 2;
     margin-bottom: $e-base-line-height * 2;
+    position: relative;
+    &:after {
+        background: $e-color-tertiairy;
+        bottom: -10px;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 30px;
+    }
 }
 
 %e-h-3 {
@@ -67,6 +87,16 @@ $e-base-font-size: $e-sb;
     font-weight: 300;
     line-height: $e-base-line-height * 2;
     margin-bottom: $e-base-line-height;
+    position: relative;
+    &:after {
+        background: $e-color-tertiairy;
+        bottom: -10px;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 20px;
+    }
 }
 
 %e-h-4 {
