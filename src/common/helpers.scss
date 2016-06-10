@@ -1,0 +1,39 @@
+.e-left {
+    text-align: left;
+}
+.e-right {
+    text-align: right;
+}
+.e-center {
+    text-align: center;
+}
+.e-inline {
+    display: inline-block;
+}
+.e-block {
+    display: block;
+    width: 100%;
+}
+.e-clearfix {
+    @include e-clearfix();
+}
+.e-fl--right {
+    float: right;
+}
+.e-fl--left {
+    float: left;
+}
+
+.e-no-margin {
+    margin: 0px;
+}
+.e-no-margin-bottom {
+    margin-bottom: 0px;
+}
+
+.e-no-padding {
+    padding: 0px;
+}
+.e-no-padding-bottom {
+    padding-bottom: 0px;
+}

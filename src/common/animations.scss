@@ -1,0 +1,27 @@
+@mixin e-keyframes($animation-name) {
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin e-animation($str) {
+    animation: #{$str};
+}
+
+// @include p-keyframes(slide-down) {
+//   0% { opacity: 1; }
+//   90% { opacity: 0; }
+// }
+//
+// .element {
+//   width: 100px;
+//   height: 100px;
+//   background: black;
+//   @include p-animation('slide-down 5s 3');
+// }
+
+
+@include e-keyframes(spin) {
+    0% {  transform: rotate(0deg); }
+    100% {  transform: rotate(180deg); }
+}

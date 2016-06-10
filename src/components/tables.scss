@@ -1,0 +1,89 @@
+/** <h2 class="sg-h2">Tables</h2> */
+
+/**
+ * Tables:
+ * extensies op thead <br>
+ * `.e-table__thead--light` <br>
+ * `.e-table__thead--dark` <br>
+ *
+ *     @example
+ *     table.e-table
+ *         thead.e-table__thead.e-table__thead--light
+ *             tr.e-table__tr
+ *                 th.e-table__th First Name
+ *                 th.e-table__th Last Name
+ *         tbody.e-tbody
+ *             tr.e-table__tr
+ *                 td.e-table__td Mark
+ *                 td.e-table__td Otto
+ *             tr.e-table__tr
+ *                 td.e-table__td Jacob
+ *                 td.e-table__td Thornton
+ *             tr.e-table__tr
+ *                 td.e-table__td Larry
+ *                 td.e-table__td the Bird
+ *     <br>
+ *     <br>
+ *     table.e-table
+ *         thead.e-table__thead.e-table__thead--dark
+ *             tr.e-table__tr
+ *                 th.e-table__th First Name
+ *                 th.e-table__th Last Name
+ *         tbody.e-tbody
+ *             tr.e-table__tr
+ *                 td.e-table__td Mark
+ *                 td.e-table__td Otto
+ *             tr.e-table__tr
+ *                 td.e-table__td Mark
+ *                 td.e-table__td Otto
+ *
+ */
+
+.e-table {
+    width: 100%;
+}
+.e-table__thead {
+    color: $e-color-text;
+    text-align: left;
+    &.e-table__thead--light {
+        font-weight: 500;
+        color: lighten($e-color-text, 20%);
+        background: $e-color-white;
+        border-bottom: 1px solid $e-color-divider;
+        .e-table__th {
+            font-weight: 500;
+        }
+    }
+    &.e-table__thead--dark {
+        background: $e-color-title;
+        color: $e-color-white;
+        .e-table__th {
+            font-weight: 300;
+        }
+    }
+}
+.e-table__th {
+    font-size: .75rem;
+    letter-spacing: 2px;
+    padding: .75rem;
+    text-transform: uppercase;
+}
+.e-tbody {
+    // to be defined
+    .e-table__tr {
+        @include e-transition(box-shadow .5s ease-out);
+        border-bottom: 1px solid $e-color-divider;
+        width: 100%;
+        &:hover {
+            background: lighten($e-color-4, 3%);
+            box-shadow: 0 6px 16px -6px rgba($e-color-shade-30, .25);
+        }
+    }
+}
+
+.e-table__tr {
+    // to be defined
+}
+.e-table__td {
+    padding: .75rem;
+}

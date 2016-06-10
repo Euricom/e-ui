@@ -1,0 +1,76 @@
+/** <h2 class="sg-h2">Colors</h2> */
+
+/**
+* Main Colors:
+* `$e-color-primary` <br>
+* `$e-color-secondary` <br>
+* `$e-color-tertiairy` <br>
+*
+*     @example
+*     small $e-color-primary: #62B09F
+*     div.sg-colorbox.sg-col1
+*     small $e-color-secondary: #405868
+*     div.sg-colorbox.sg-col2
+*     small $e-color-tertiairy: #B2BCC6
+*     div.sg-colorbox.sg-col3
+*/
+
+/**
+* Secondary:
+* `$e-color-success` <br>
+* `$e-color-alert` <br>
+* `$e-color-danger` <br>
+*
+*     @example
+*     small $e-color-succes: #53C1FA
+*     div.sg-colorbox.sg-col4
+*     small $e-color-alert: #FFD11Ca
+*     div.sg-colorbox.sg-col5
+*     small $e-color-danger: #FF0000
+*     div.sg-colorbox.sg-col6
+*/
+
+/**
+* Gradients:
+*
+*     @example
+*     small $e-color-primary - $e-color-secondary
+*     div.sg-colorbox.sg-grad1
+*/
+
+// ------
+// Colors
+// ------
+
+// Basic colors
+$e-color-white: #FFFFFF;
+$e-color-black: #000000;
+
+$e-color-shade-10: #F0F0F0;
+$e-color-shade-30: #969696;
+
+// Brand colors
+$e-color-primary: #67C088;
+$e-color-secondary: #0089AE;
+$e-color-tertiairy: #007E63;
+$e-color-4: #F0F2F4;
+
+$e-color-title: darken($e-color-secondary, 15%);
+$e-color-text: darken(#86A6AE, 10%);
+
+$e-color-link: #004D62;
+$e-color-link-active: $e-color-primary;
+
+$e-color-info: #53C1FA;
+$e-color-succes: #449D44;
+$e-color-alert: #FFD11C;
+$e-color-danger: #FF0000;
+
+$e-color-body-bg: #F0F2F4;
+$e-color-border: #F2F2F2; // result of 50% of textcolor
+$e-color-divider: #F2F2F2;
+
+// Breakpoints
+$e-breakpoint-small: 480px;
+$e-breakpoint-medium: 768px;
+$e-breakpoint-large: 1024px;

@@ -1,0 +1,83 @@
+/** <h2 class="sg-h2">The Grid</h2> */
+
+/**
+ * 12 column grid:
+ * `.e-container` <br>
+ * `.e-row` <br>
+ * `.e-col-1`  `.e-col-12`
+ *
+ *     @example
+ *     div.e-container
+ *       div.e-row
+ *           div.e-col-12.sg-col e-col-12
+ *       div.e-row
+ *           div.e-col-6.sg-col e-col-6
+ *           div.e-col-6.sg-col e-col-6
+ *       div.e-row
+ *           div.e-col-4.sg-col e-col-4
+ *           div.e-col-4.sg-col e-col-4
+ *           div.e-col-4.sg-col e-col-4
+ *       div.e-row
+ *           div.e-col-3.sg-col e-col-3
+ *           div.e-col-3.sg-col e-col-3
+ *           div.e-col-3.sg-col e-col-3
+ *           div.e-col-3.sg-col e-col-3
+ *       div.e-row
+ *           div.e-col-2.sg-col e-col-2
+ *           div.e-col-2.sg-col e-col-2
+ *           div.e-col-6.sg-col e-col-6
+ *           div.e-col-2.sg-col e-col-2
+ *
+ */
+
+// Grid Settings
+$e-grid-max-width: 1140px;
+$e-grid-gutter-width: 1.5rem;
+$e-grid-columns: 12;
+$e-grid-columns-margin-bottom: 1rem;
+
+@mixin e-make-container($gw: $e-grid-gutter-width) {
+    @include e-clearfix();
+    margin: 0 auto;
+    max-width: $e-grid-max-width;
+    padding: 0 ($gw / 2);
+}
+
+@mixin e-make-row($gw: $e-grid-gutter-width) {
+    @include e-clearfix();
+    margin-bottom: $e-grid-columns-margin-bottom;
+    margin-left: ($gw / -2);
+    margin-right: ($gw / -2);
+}
+
+@mixin e-make-col($columns) {
+    float: left;
+    min-height: 1px;
+    padding-left: ($e-grid-gutter-width / 2);
+    padding-right: ($e-grid-gutter-width / 2);
+    position: relative;
+    width: percentage(($columns / $e-grid-columns));
+}
+
+// Container
+.e-container {
+    @include e-make-container();
+}
+// Row
+.e-row {
+    @include e-make-row();
+    &.e-row--nomargin-b {
+        margin-bottom: 0;
+    }
+}
+// Columns
+@for $i from 1 through $e-grid-columns {
+    .e-col-#{$i} {
+        @media (max-width: $e-breakpoint-large){
+            @include e-make-col(12);
+        }
+        @media (min-width: $e-breakpoint-large){
+            @include e-make-col($i);
+        }
+    }
+}

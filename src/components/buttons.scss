@@ -1,0 +1,108 @@
+/** <h2 class="sg-h2">Buttons</h2> */
+
+/**
+ * Button sizes:
+ * `.e-btn--sm` <br>
+ * `.e-btn` <br>
+ * `.e-btn--lg` <br>
+ * `.e-btn--block` <br>
+ *
+ *     @example
+ *     button.e-btn.e-btn--sm
+ *       span button
+ *     button.e-btn
+ *       span button
+ *     button.e-btn.e-btn--lg
+ *       span button
+ *     button.e-btn.e-btn--block
+ *       span button
+ *
+ */
+
+// button-style mixin
+@mixin e-btn-style($color) {
+    background: $color;
+    box-shadow: 0 2px 0px 0 darken($color, 10%);
+    @include e-transition(all .15s ease);
+    transform: translateY(0px);
+    &:hover {
+        background: darken($color, 12%);
+        box-shadow: 0 6px 6px -4px rgba(0, 0, 0, .25), 0 6px 16px 0 rgba(150, 150, 150, .15);
+        transform: translateY(-1px);
+    }
+}
+
+.e-btn {
+    @include e-btn-style($e-color-primary);
+    display: inline-block;
+    vertical-align: top;
+    // margin: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    padding: .75rem 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer; // for use on div or a
+}
+// Modifiers
+.e-btn--sm {
+    font-size: .75rem;
+    padding: .5rem 1.25rem;
+}
+.e-btn--lg {
+    font-size: 1rem;
+    padding: 1rem 2.25rem;
+}
+.e-btn--block {
+    width: 100%;
+}
+
+/**
+ * Button Styles :
+ * `.e-btn--info` <br>
+ * `.e-btn--succes` <br>
+ * `.e-btn--alert` <br>
+ * `.e-btn--danger` <br>
+ * `.e-btn--disabled` <br>
+ *
+ *     @example
+ *     a.e-btn.btn--info
+ *       span info
+ *     a.e-btn.btn--succes
+ *       span succes
+ *     a.e-btn.btn--alert
+ *       span alert
+ *     a.e-btn.btn--danger
+ *       span danger
+ *     a.e-btn.btn--disabled
+ *       span disabled
+ */
+
+// Modifiers
+.e-btn--info {
+    @include e-btn-style($e-color-info);
+}
+.e-btn--succes {
+    @include e-btn-style($e-color-succes);
+}
+.e-btn--alert {
+    @include e-btn-style($e-color-alert);
+}
+.e-btn--danger {
+    @include e-btn-style($e-color-danger);
+}
+.e-btn--disabled,
+.e-btn--disabled:hover {
+    transform: translateY(0px);
+    background: lighten($e-color-tertiairy, 20%);
+    box-shadow: 0 2px 0 0 darken(lighten($e-color-tertiairy, 20%), 5%);
+    color: lighten($e-color-tertiairy, 10%);
+    cursor: default;
+}

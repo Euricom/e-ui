@@ -1,0 +1,79 @@
+.sg {
+    background: $e-color-white;
+    color: $e-color-text;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+.sg-header {
+    background: #F2F2F2;
+    color: $e-color-title;
+    margin-bottom: 3rem;
+    padding: 3.5rem 0;
+    text-align: center;
+    width: 100%;
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 5rem;
+        font-weight: 300;
+        span {
+            color: $e-color-text;
+            display: block;
+            font-size: 1rem;
+        }
+    }
+}
+.sg-container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 15px;
+}
+.sg-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sg-h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+// GRID
+.sg-col {
+    background: #F2F2F2;
+    border: 2px solid $e-color-white;
+    font-size: 12px;
+    min-height: 20px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+.sg-colorbox {
+    color: $e-color-white;
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1rem 5rem;
+    width: 220px;
+    &.sg-col1 {
+        background: $e-color-primary;
+    }
+    &.sg-col2 {
+        background: $e-color-secondary;
+    }
+    &.sg-col3 {
+        background: $e-color-tertiairy;
+    }
+    &.sg-col4 {
+        background: $e-color-succes;
+    }
+    &.sg-col5 {
+        background: $e-color-alert;
+    }
+    &.sg-col6 {
+        background: $e-color-danger;
+    }
+    &.sg-grad1 {
+        @include e-gradient-vertical($e-color-secondary, $e-color-primary);
+        display: block;
+        height: 100px;
+        width: 100%;
+    }
+}

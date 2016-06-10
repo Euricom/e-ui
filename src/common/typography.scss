@@ -1,0 +1,142 @@
+/** <h2 class="sg-h2">Typography</h2> */
+
+/**
+ * Headings:
+ * `.e-h-1` <br>
+ * `.e-h-2` <br>
+ * `.e-h-3` <br>
+ * `.e-h-4` <br>
+ * `.e-h-5` <br>
+ * `.e-h-6` <br>
+ *
+ *     @example
+ *     h1.e-h-1 H1 Innoveren. Inspireren. Bewegen. Verder denken.
+ *     h2.e-h-2 H2 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     h3.e-h-3 H3 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     h4.e-h-4 Innoveren. Inspireren. Bewegen. Verder denken. H4
+ *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     h5.e-h-5 Innoveren. Inspireren. Bewegen. Verder denken. H5
+ *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     p.e-paragraph Dit kan alleen dankzij de kritische geest, de creativiteit en de sterke innovatieve cultuur die heersen binnen het bedrijf, bij de uitgevers en in de auteursgroepen.
+ *     h6.e-h-6 Innoveren. Inspireren. Bewegen. Verder denken. H6
+ *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     ul
+ *         li Item 1
+ *         li Item 2
+ *         li Item 3
+ *
+ */
+
+.e-body * {
+    font-family: 'Open Sans', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+// SCALE-BASE & SCALE-RATIO
+// more info about vertical rythm
+// https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm
+$e-sb: 1rem;
+$e-sr: 1.25;
+
+// set explicit line height
+$e-base-line-height: 1.3rem;
+$e-base-font-size: $e-sb;
+
+%e-h-1 {
+    color: $e-color-title;
+    font-size: $e-base-font-size * e-pow($e-sr, 5);
+    font-weight: bold;
+    line-height: $e-base-line-height * 3;
+    margin-bottom: $e-base-line-height * 2;
+}
+
+%e-h-2 {
+    color: $e-color-title;
+    font-size: $e-base-font-size * e-pow($e-sr, 4);
+    font-weight: bold;
+    line-height: $e-base-line-height * 2;
+    margin-bottom: $e-base-line-height * 2;
+}
+
+%e-h-3 {
+    color: $e-color-title;
+    font-size: $e-base-font-size * e-pow($e-sr, 3);
+    font-weight: bold;
+    line-height: $e-base-line-height * 2;
+    margin-bottom: $e-base-line-height;
+}
+
+%e-h-4 {
+    color: $e-color-title;
+    font-size: $e-base-font-size * e-pow($e-sr, 2);
+    font-weight: bold;
+    line-height: $e-base-line-height * 2;
+    margin-bottom: $e-base-line-height;
+}
+
+%e-h-5 {
+    color: $e-color-title;
+    font-size: $e-base-font-size * $e-sr;
+    font-weight: bold;
+    line-height: $e-base-line-height;
+    margin-bottom: $e-base-line-height;
+}
+
+%e-h-6 {
+    color: $e-color-title;
+    font-size: $e-base-font-size;
+    font-weight: bold;
+    line-height: $e-base-line-height;
+    margin-bottom: $e-base-line-height;
+}
+
+.e-h-1 {
+    @extend %e-h-1;
+}
+
+.e-h-2 {
+    @extend %e-h-2;
+}
+
+.e-h-3 {
+    @extend %e-h-3;
+}
+
+.e-h-4 {
+    @extend %e-h-4;
+}
+
+.e-h-5 {
+    @extend %e-h-5;
+}
+
+.e-h-6 {
+    @extend %e-h-6;
+}
+
+%e-paragraph {
+    color: $e-color-text;
+    font-size: $e-base-font-size;
+    line-height: 1.5rem;
+    margin-bottom: $e-base-line-height;
+}
+
+.e-paragraph {
+    @extend %e-paragraph;
+}
+
+.e-anchor {
+    color: $e-color-link;
+    text-decoration: none;
+    &:hover {
+        color: $e-color-link-active;
+    }
+}
+
+.e-list--unorderd {
+    list-style-position: inside;
+    padding-left: 0;
+}

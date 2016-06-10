@@ -1,0 +1,62 @@
+@mixin e-clearfix() {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin e-gradient-horizontal($start-color: #555555, $end-color: #333333, $start-percent: 0%, $end-percent: 100%) {
+    background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin e-gradient-vertical($start-color: #555555, $end-color: #333333, $start-percent: 0%, $end-percent: 100%) {
+    background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+// css-transition
+@mixin e-transition($args) {
+    transition: $args;
+}
+
+// Power function 2 * 2 * 2 => pow(2,3)
+// since sass has no power function
+@function e-pow($num, $exp) {
+    $val: 1;
+
+    @if $exp > 0 {
+        @for $i from 1 through $exp {
+            $val: $val * $num;
+        }
+    }
+
+    @return $val;
+}
+
+@mixin e-image-circled($width) {
+    border-radius: $width;
+    height: $width;
+    overflow: hidden;
+    width: $width;
+    img {
+        width: 100%;
+    }
+}
+
+
+@mixin break-word() {
+    word-wrap: break-word;
+    word-break: keee-all;
+}

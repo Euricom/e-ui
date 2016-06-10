@@ -1,0 +1,35 @@
+{
+  "name": "e-ui",
+  "version": "1.0.0",
+  "description": "clean & minimal scss framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "styledown sass/**/*.scss sd_config.md > styleguide/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pelckmans/pakket-p-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pelckmans/pakket-p-ui/issues"
+  },
+  "homepage": "https://github.com/Pelckmans/pakket-p-ui#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-open": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-scss-lint": "^0.3.9",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-styledown": "0.0.2",
+    "rimraf": "^2.5.2"
+  }
+}
