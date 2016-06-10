@@ -10,9 +10,11 @@
  * `.e-h-6` <br>
  *
  *     @example
- *     h1.e-h-1 H1 Innoveren. Inspireren. Bewegen. Verder denken.
- *     h2.e-h-2 H2 Pelckmans is toonaangevend wat didactische concepten betreft
- *     h3.e-h-3 H3 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     h1.e-h-1.e-h-line H1 Innoveren. Inspireren. Bewegen. Verder denken.
+ *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     h2.e-h-2.e-h-line H2 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     h3.e-h-3.e-h-line H3 Pelckmans is toonaangevend wat didactische concepten betreft
  *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
  *     h4.e-h-4 Innoveren. Inspireren. Bewegen. Verder denken. H4
  *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
@@ -51,16 +53,6 @@ $e-base-font-size: $e-sb;
     font-weight: 300;
     line-height: $e-base-line-height * 3;
     margin-bottom: $e-base-line-height * 2;
-    position: relative;
-    &:after {
-        background: $e-color-tertiairy;
-        bottom: -10px;
-        content: '';
-        height: 2px;
-        left: 0;
-        position: absolute;
-        width: 40px;
-    }
 }
 
 %e-h-2 {
@@ -69,16 +61,6 @@ $e-base-font-size: $e-sb;
     font-weight: 300;
     line-height: $e-base-line-height * 2;
     margin-bottom: $e-base-line-height * 2;
-    position: relative;
-    &:after {
-        background: $e-color-tertiairy;
-        bottom: -10px;
-        content: '';
-        height: 2px;
-        left: 0;
-        position: absolute;
-        width: 30px;
-    }
 }
 
 %e-h-3 {
@@ -86,17 +68,7 @@ $e-base-font-size: $e-sb;
     font-size: $e-base-font-size * e-pow($e-sr, 3);
     font-weight: 300;
     line-height: $e-base-line-height * 2;
-    margin-bottom: $e-base-line-height;
-    position: relative;
-    &:after {
-        background: $e-color-tertiairy;
-        bottom: -10px;
-        content: '';
-        height: 2px;
-        left: 0;
-        position: absolute;
-        width: 20px;
-    }
+    margin-bottom: $e-base-line-height * 2;
 }
 
 %e-h-4 {
@@ -145,6 +117,19 @@ h5, .e-h-5 {
 
 h6, .e-h-6 {
     @extend %e-h-6;
+}
+
+.e-h-line {
+    position: relative;
+    &:after {
+        background: $e-color-tertiairy;
+        bottom: -15px;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 30px;
+    }
 }
 
 %e-paragraph {
