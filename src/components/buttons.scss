@@ -14,6 +14,8 @@
  *       span button
  *     button.e-btn.e-btn--lg
  *       span button
+ *     button.e-btn.e-btn--lg.e-btn--round
+ *       span button
  *     button.e-btn.e-btn--block
  *       span button
  *
@@ -42,7 +44,7 @@
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 1px;
     color: #FFFFFF;
     text-align: center;
@@ -61,6 +63,9 @@
 }
 .e-btn--block {
     width: 100%;
+}
+.e-btn--round {
+    border-radius: 100px;
 }
 
 /**
