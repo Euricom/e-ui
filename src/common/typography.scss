@@ -93,27 +93,27 @@ $e-base-font-size: $e-sb;
     margin-bottom: $e-base-line-height;
 }
 
-.e-h-1 {
+h1, .e-h-1 {
     @extend %e-h-1;
 }
 
-.e-h-2 {
+h2, .e-h-2 {
     @extend %e-h-2;
 }
 
-.e-h-3 {
+h3, .e-h-3 {
     @extend %e-h-3;
 }
 
-.e-h-4 {
+h4, .e-h-4 {
     @extend %e-h-4;
 }
 
-.e-h-5 {
+h5, .e-h-5 {
     @extend %e-h-5;
 }
 
-.e-h-6 {
+h6, .e-h-6 {
     @extend %e-h-6;
 }
 
@@ -124,11 +124,11 @@ $e-base-font-size: $e-sb;
     margin-bottom: $e-base-line-height;
 }
 
-.e-paragraph {
+p, .e-paragraph {
     @extend %e-paragraph;
 }
 
-.e-anchor {
+a, .e-anchor {
     color: $e-color-link;
     text-decoration: none;
     &:hover {
@@ -136,7 +136,7 @@ $e-base-font-size: $e-sb;
     }
 }
 
-.e-list--unorderd {
+ul, .e-list--unorderd {
     list-style-position: inside;
     padding-left: 0;
 }
