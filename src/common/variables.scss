@@ -13,6 +13,10 @@
 *     div.sg-colorbox.sg-col2
 *     small $e-color-tertiairy: #B2BCC6
 *     div.sg-colorbox.sg-col3
+*     small $e-color-title: #333C4E
+*     div.sg-colorbox.sg-col4
+*     small $e-color-text: #7E8890
+*     div.sg-colorbox.sg-col5
 */
 
 /**
@@ -23,19 +27,11 @@
 *
 *     @example
 *     small $e-color-succes: #53C1FA
-*     div.sg-colorbox.sg-col4
-*     small $e-color-alert: #FFD11Ca
-*     div.sg-colorbox.sg-col5
-*     small $e-color-danger: #FF0000
 *     div.sg-colorbox.sg-col6
-*/
-
-/**
-* Gradients:
-*
-*     @example
-*     small $e-color-primary - $e-color-secondary
-*     div.sg-colorbox.sg-grad1
+*     small $e-color-alert: #FFD11Ca
+*     div.sg-colorbox.sg-col7
+*     small $e-color-danger: #FF0000
+*     div.sg-colorbox.sg-col8
 */
 
 // ------
@@ -60,7 +56,7 @@ $e-color-title: #333C4E;
 $e-color-text: #7E8890;
 
 $e-color-link: $e-color-tertiairy;
-$e-color-link-active: $e-color-primary;
+$e-color-link-active: $e-color-text;
 
 $e-color-info: #53C1FA;
 $e-color-succes: #449D44;
@@ -68,8 +64,8 @@ $e-color-alert: #FFD11C;
 $e-color-danger: #FF0000;
 
 $e-color-body-bg: #F0F2F4;
-$e-color-border: #F2F2F2; // result of 50% of textcolor
-$e-color-divider: #F2F2F2;
+$e-color-border: lighten($e-color-text, 30%);
+$e-color-divider: lighten($e-color-text, 35%);
 
 // Breakpoints
 $e-breakpoint-small: 480px;

@@ -50,8 +50,8 @@
     color: $e-color-white;
     display: block;
     margin-bottom: 1rem;
-    padding: 1rem 5rem;
-    width: 220px;
+    padding: 1rem 1rem;
+    width: 40px;
     &.sg-col1 {
         background: $e-color-primary;
     }
@@ -62,18 +62,18 @@
         background: $e-color-tertiairy;
     }
     &.sg-col4 {
-        background: $e-color-succes;
+        background: $e-color-title;
     }
     &.sg-col5 {
-        background: $e-color-alert;
+        background: $e-color-text;
     }
     &.sg-col6 {
-        background: $e-color-danger;
+        background: $e-color-succes;
     }
-    &.sg-grad1 {
-        @include e-gradient-vertical($e-color-secondary, $e-color-primary);
-        display: block;
-        height: 100px;
-        width: 100%;
+    &.sg-col7 {
+        background: $e-color-alert;
+    }
+    &.sg-col8 {
+        background: $e-color-danger;
     }
 }
