@@ -10,15 +10,15 @@
  * `.e-h-6` <br>
  *
  *     @example
- *     h1.e-h-1.e-h-line H1 Innoveren. Inspireren. Bewegen. Verder denken.
+ *     h1.e-h-1.e-h-line-primary H1 Innoveren. Inspireren. Bewegen. Verder denken.
  *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
- *     h2.e-h-2.e-h-line H2 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     h2.e-h-2.e-h-line-primary H2 Pelckmans is toonaangevend wat didactische concepten betreft
  *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
- *     h3.e-h-3.e-h-line H3 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     h3.e-h-3.e-h-line-primary H3 Pelckmans is toonaangevend wat didactische concepten betreft
  *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
- *     h4.e-h-4 Innoveren. Inspireren. Bewegen. Verder denken. H4
+ *     h4.e-h-4.e-h-line-secondary Innoveren. Inspireren. Bewegen. Verder denken. H4
  *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
- *     h5.e-h-5 Innoveren. Inspireren. Bewegen. Verder denken. H5
+ *     h5.e-h-5.e-h-line-secondary Innoveren. Inspireren. Bewegen. Verder denken. H5
  *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
  *     p.e-paragraph Dit kan alleen dankzij de kritische geest, de creativiteit en de sterke innovatieve cultuur die heersen binnen het bedrijf, bij de uitgevers en in de auteursgroepen.
  *     h6.e-h-6 Innoveren. Inspireren. Bewegen. Verder denken. H6
@@ -119,7 +119,7 @@ h6, .e-h-6 {
     @extend %e-h-6;
 }
 
-.e-h-line {
+.e-h-line-primary {
     position: relative;
     &:after {
         background: $e-color-tertiairy;
@@ -132,11 +132,21 @@ h6, .e-h-6 {
     }
 }
 
+.e-h-line-secondary {
+    @extend .e-h-line-primary;
+    &:after {
+        background: $e-color-secondary;
+        bottom: -10px;
+        height: 1px;
+    }
+}
+
 %e-paragraph {
     color: $e-color-text;
     font-size: $e-base-font-size;
     line-height: 1.5rem;
     margin-bottom: $e-base-line-height;
+    margin-top: 0;
 }
 
 p, .e-paragraph {
