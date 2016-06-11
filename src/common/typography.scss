@@ -36,6 +36,32 @@
     -webkit-font-smoothing: antialiased;
 }
 
+@mixin e-h-line($margin) {
+    &.e-h-line-primary {
+        position: relative;
+        &:after {
+            background: $e-color-primary;
+            bottom: - $margin / 2;
+            content: '';
+            height: 2px;
+            left: 0;
+            position: absolute;
+            width: $margin;
+        }
+    }
+    &.e-h-line-secondary {
+        @extend .e-h-line-primary;
+        &:after {
+            background: $e-color-secondary;
+        }
+    }
+    &.e-h-line-tertiairy {
+        @extend .e-h-line-primary;
+        &:after {
+            background: $e-color-tertiairy;
+        }
+    }
+}
 
 // SCALE-BASE & SCALE-RATIO
 // more info about vertical rythm
@@ -48,6 +74,7 @@ $e-base-line-height: 1.3rem;
 $e-base-font-size: $e-sb;
 
 %e-h-1 {
+    @include e-h-line( $e-base-line-height * 2 );
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 5);
     font-weight: 300;
@@ -56,6 +83,7 @@ $e-base-font-size: $e-sb;
 }
 
 %e-h-2 {
+    @include e-h-line( $e-base-line-height * 2 );
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 4);
     font-weight: 300;
@@ -64,6 +92,7 @@ $e-base-font-size: $e-sb;
 }
 
 %e-h-3 {
+    @include e-h-line( $e-base-line-height * 2 );
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 3);
     font-weight: 300;
@@ -72,6 +101,7 @@ $e-base-font-size: $e-sb;
 }
 
 %e-h-4 {
+    @include e-h-line( $e-base-line-height );
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 2);
     font-weight: bold;
@@ -80,6 +110,7 @@ $e-base-font-size: $e-sb;
 }
 
 %e-h-5 {
+    @include e-h-line( $e-base-line-height );
     color: $e-color-title;
     font-size: $e-base-font-size * $e-sr;
     font-weight: bold;
@@ -88,6 +119,7 @@ $e-base-font-size: $e-sb;
 }
 
 %e-h-6 {
+    @include e-h-line( $e-base-line-height );
     color: $e-color-title;
     font-size: $e-base-font-size;
     font-weight: bold;
@@ -117,28 +149,6 @@ h5, .e-h-5 {
 
 h6, .e-h-6 {
     @extend %e-h-6;
-}
-
-.e-h-line-primary {
-    position: relative;
-    &:after {
-        background: $e-color-tertiairy;
-        bottom: -15px;
-        content: '';
-        height: 2px;
-        left: 0;
-        position: absolute;
-        width: 30px;
-    }
-}
-
-.e-h-line-secondary {
-    @extend .e-h-line-primary;
-    &:after {
-        background: $e-color-secondary;
-        bottom: -10px;
-        height: 1px;
-    }
 }
 
 %e-paragraph {
