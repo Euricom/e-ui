@@ -5,6 +5,7 @@
  * `.e-btn--sm` <br>
  * `.e-btn` <br>
  * `.e-btn--lg` <br>
+ * `.e-btn--xlg` <br>
  * `.e-btn--block` <br>
  *
  *     @example
@@ -68,6 +69,7 @@
     padding: 1.5rem 4rem;
 }
 .e-btn--block {
+    margin-right: 0;
     width: 100%;
 }
 .e-btn--round {
