@@ -80,7 +80,7 @@ $e-base-font-size: $e-sb;
     font-size: $e-base-font-size * e-pow($e-sr, 5);
     font-weight: 300;
     line-height: $e-base-line-height * 3;
-    margin-bottom: $e-base-line-height * 2;
+    margin-bottom: $e-base-line-height * 3.5;
 }
 
 %e-h-2 {
@@ -89,7 +89,7 @@ $e-base-font-size: $e-sb;
     font-size: $e-base-font-size * e-pow($e-sr, 4);
     font-weight: 300;
     line-height: $e-base-line-height * 2;
-    margin-bottom: $e-base-line-height * 2;
+    margin-bottom: $e-base-line-height * 3;
 }
 
 %e-h-3 {
