@@ -55,8 +55,12 @@
     }
 }
 
-
 @mixin break-word() {
     word-wrap: break-word;
-    word-break: keee-all;
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
 }
