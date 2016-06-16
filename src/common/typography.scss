@@ -36,11 +36,11 @@
     -webkit-font-smoothing: antialiased;
 }
 
-@mixin e-h-line($margin, $width: 30px, $height: 2px) {
+@mixin e-h-line($margin, $width: 30px, $height: 2px, $color:$e-color-primary) {
     &.e-h-line-primary {
         position: relative;
         &:after {
-            background: $e-color-primary;
+            background: $color;
             bottom: - $margin / 2;
             content: '';
             height: $height;
@@ -74,6 +74,7 @@ $e-base-line-height: 1.3rem;
 $e-base-font-size: $e-sb;
 
 %e-h-1 {
+    //($margin, $width, $height: 2px) {
     @include e-h-line( $e-base-line-height * 2,  $e-base-font-size * e-pow($e-sr, 5), 2px);
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 5);
@@ -92,7 +93,7 @@ $e-base-font-size: $e-sb;
 }
 
 %e-h-3 {
-    @include e-h-line( $e-base-line-height * 2, $e-base-font-size * e-pow($e-sr, 3), 2px );
+    @include e-h-line( $e-base-line-height * 2,  $e-base-font-size * e-pow($e-sr, 4), 2px, $e-color-title );
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 3);
     font-weight: 300;

@@ -73,10 +73,10 @@ $e-grid-columns-margin-bottom: 1rem;
 // Columns
 @for $i from 1 through $e-grid-columns {
     .e-col-#{$i} {
-        @media (max-width: $e-breakpoint-large){
+        @media (max-width: $e-breakpoint-medium){
             @include e-make-col(12);
         }
-        @media (min-width: $e-breakpoint-large){
+        @media (min-width: $e-breakpoint-medium){
             @include e-make-col($i);
         }
     }
