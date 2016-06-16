@@ -4,7 +4,7 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <script src='https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.js'></script>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.css' />
     <link rel='stylesheet' href='../dist/css/main.css' />
 
@@ -16,4 +16,4 @@
         </h1>
     </div>
 
-    <div class='sg-container' sg-content></div>
+    <div class='sg-container e-body' sg-content></div>
