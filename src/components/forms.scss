@@ -78,26 +78,25 @@
 
 /**
  * Inputs & Buttons:
- * Form elements are positioned width the grid
- * Use `.e-formbtn`
- * Use `.e-input--sm`
+ * Use `.e-formbtn` on buttons with labels on top.
+ * And use `.e-input--sm` or `.e-input--lg` to size the input
  *
  *     @example
  *     div.e-container
  *         form
  *             div.e-row
  *                 div.e-col-8
- *                     label Name
+ *                     label Label (default height)
  *                     input(type="text", name="title", class="")
  *                 div.e-col-4
  *                     .e-formbtn send
  *                 div.e-col-8
- *                     label Name
+ *                     label .e-input--sm
  *                     input.e-input--sm(type="text", name="title", class="")
  *                 div.e-col-4
  *                     .e-formbtn.e-btn--sm send
  *                 div.e-col-8
- *                     label Name
+ *                     label .e-input--lg
  *                     input.e-input--lg(type="text", name="title", class="")
  *                 div.e-col-4
  *                     .e-formbtn.e-btn--lg send
@@ -128,7 +127,7 @@ textarea {
     display: inline-block;
     font-family: inherit;
     font-size: 1rem;
-    height: 3rem;
+    height: 2.75rem;
     margin: 0 0 1rem;
     padding: .5rem;
     transition: box-shadow .5s, border-color .25s ease-in-out;
