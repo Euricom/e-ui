@@ -55,7 +55,7 @@
 // Modifiers
 .e-btn--sm {
     font-size: .75rem;
-    padding: .5rem 1.25rem;
+    padding: .63rem 1.25rem;
 }
 .e-btn--lg {
     font-size: 1rem;
@@ -109,4 +109,12 @@
     box-shadow: 0 2px 0 0 darken(lighten($e-color-button, 20%), 5%);
     color: lighten($e-color-tertiairy, 10%);
     cursor: default;
+}
+.e-formbtn {
+    @extend .e-btn;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    @media (max-width: $e-breakpoint-medium){
+        margin-top: 0;
+    }
 }

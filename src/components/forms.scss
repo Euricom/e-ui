@@ -21,14 +21,14 @@
  *             div.e-row
  *                 div.e-col-12
  *                     label Textarea
- *                     textarea(placeholder="textarea")
+ *                     textarea(placeholder="textarea" rows="4")
  *             div.e-row
  *                 div.e-col-12
  *                     label Disabled Input
  *                     input(type="text", name="title", placeholder="Student", disabled="disabled")
  *             div.e-row
  *                 div.e-col-4
- *                     label.right.inline Name
+ *                     label.e-right.e-inline Name
  *                 div.e-col-8
  *                     input(type="text", name="title", class="")
  */
@@ -76,7 +76,33 @@
 *                     option(value="value_2") value 3
 */
 
-// Based on Forms from foundation
+/**
+ * Inputs & Buttons:
+ * Form elements are positioned width the grid
+ * Use `.e-formbtn`
+ * Use `.e-input--sm`
+ *
+ *     @example
+ *     div.e-container
+ *         form
+ *             div.e-row
+ *                 div.e-col-8
+ *                     label Name
+ *                     input(type="text", name="title", class="")
+ *                 div.e-col-4
+ *                     .e-formbtn send
+ *                 div.e-col-8
+ *                     label Name
+ *                     input.e-input--sm(type="text", name="title", class="")
+ *                 div.e-col-4
+ *                     .e-formbtn.e-btn--sm send
+ *                 div.e-col-8
+ *                     label Name
+ *                     input.e-input--lg(type="text", name="title", class="")
+ *                 div.e-col-4
+ *                     .e-formbtn.e-btn--lg send
+ */
+
 // Form normalization via normalize.scss
 
 [type='text'],
@@ -102,11 +128,17 @@ textarea {
     display: inline-block;
     font-family: inherit;
     font-size: 1rem;
-    height: 2.4375rem;
+    height: 3rem;
     margin: 0 0 1rem;
     padding: .5rem;
     transition: box-shadow .5s, border-color .25s ease-in-out;
     width: 100%;
+    &.e-input--sm {
+        height: 2.5rem;
+    }
+    &.e-input--lg {
+        height: 3.5rem;
+    }
 }
 
 [type='text']:focus,
