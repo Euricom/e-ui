@@ -255,15 +255,16 @@ ul, .e-list--unorderd {
     }
     p {
         @extend %e-paragraph;
-        margin-bottom: .75rem;
+        margin-bottom: 1rem;
     }
     ul {
-        //
+        margin-bottom: 1.6rem;
     }
     li {
         @extend %e-paragraph;
         font-size: .9rem;
         list-style: none;
+        margin-bottom: .5rem;
         margin-left: 1rem;
         position: relative;
         &:after {
@@ -273,7 +274,7 @@ ul, .e-list--unorderd {
             height: 4px;
             left: -1rem;
             position: absolute;
-            top: .5rem;
+            top: calc(.5rem + 2px);;
             width: 4px;
         }
     }
