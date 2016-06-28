@@ -45,6 +45,9 @@
         color: $e-color-white;
         transform: translateY(-1px);
     }
+    &:focus {
+        outline: 0;
+    }
 }
 
 .e-btn {

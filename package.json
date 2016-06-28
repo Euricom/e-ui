@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pelckmans/pakket-p-ui.git"
+    "url": "git+https://github.com/Euricom/e-ui"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Pelckmans/pakket-p-ui/issues"
+    "url": "https://github.com/Euricom/e-ui/issues"
   },
-  "homepage": "https://github.com/Pelckmans/pakket-p-ui#readme",
+  "homepage": "https://github.com/Euricom/e-ui#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",

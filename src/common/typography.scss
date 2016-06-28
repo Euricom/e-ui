@@ -167,7 +167,6 @@ p, .e-paragraph {
 
 a, .e-anchor {
     color: $e-color-link;
-    outline: 0;
     text-decoration: none;
     &:hover {
         color: $e-color-link-active;
@@ -175,6 +174,9 @@ a, .e-anchor {
         &:after {
             background: $e-color-link-active;
         }
+    }
+    &:focus {
+        outline: 0;
     }
 }
 
