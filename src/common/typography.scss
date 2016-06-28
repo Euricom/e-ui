@@ -170,6 +170,7 @@ a, .e-anchor {
     text-decoration: none;
     &:hover {
         color: $e-color-link-active;
+        text-decoration: none;
         &:after {
             background: $e-color-link-active;
         }
