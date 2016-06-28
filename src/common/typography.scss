@@ -230,28 +230,33 @@ ul, .e-list--unorderd {
         font-weight: bold;
         line-height: normal;
         margin-bottom: 1rem;
+        margin-top: 1.8rem;
     }
     h2 {
         font-size: 1.6rem;
         font-weight: bold;
         line-height: normal;
         margin-bottom: .8rem;
+        margin-top: 1.8rem;
     }
     h3 {
         font-size: 1.4rem;
         font-weight: bold;
         line-height: normal;
         margin-bottom: .7rem;
+        margin-top: 1.8rem;
     }
     h4 {
         font-size: 1.2rem;
         line-height: normal;
         margin-bottom: .6rem;
+        margin-top: 1.8rem;
     }
     h5,
     h6 {
         font-size: 1rem;
         margin-bottom: .5rem;
+        margin-top: 1.8rem;
     }
     p {
         @extend %e-paragraph;
