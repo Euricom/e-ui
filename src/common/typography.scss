@@ -236,31 +236,32 @@ ul, .e-list--unorderd {
         font-size: 1.6rem;
         font-weight: bold;
         line-height: normal;
-        margin-bottom: .8rem;
+        margin-bottom: 1rem;
         margin-top: 1.8rem;
     }
     h3 {
         font-size: 1.4rem;
         font-weight: bold;
         line-height: normal;
-        margin-bottom: .7rem;
+        margin-bottom: 1rem;
         margin-top: 1.8rem;
     }
     h4 {
         font-size: 1.2rem;
         line-height: normal;
-        margin-bottom: .6rem;
+        margin-bottom: 1rem;
         margin-top: 1.8rem;
     }
     h5,
     h6 {
         font-size: 1rem;
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
         margin-top: 1.8rem;
     }
     p {
         @extend %e-paragraph;
         margin-bottom: 1rem;
+        line-height: 1.8rem;
     }
     ul {
         margin-bottom: 1.6rem;
@@ -271,6 +272,7 @@ ul, .e-list--unorderd {
         list-style: none;
         margin-bottom: .5rem;
         margin-left: 1rem;
+        padding-left: .5rem;
         position: relative;
         &:after {
             background: $e-color-primary;
