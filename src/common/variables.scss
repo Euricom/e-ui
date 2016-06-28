@@ -56,7 +56,7 @@ $e-color-title: #333C4E;
 $e-color-text: #7E8890;
 
 $e-color-link: $e-color-tertiairy;
-$e-color-link-active: $e-color-text;
+$e-color-link-active: darken($e-color-tertiairy, 25%); //$e-color-text
 
 $e-color-info: #53C1FA;
 $e-color-succes: #449D44;

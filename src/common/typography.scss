@@ -11,18 +11,18 @@
  *
  *     @example
  *     h1.e-h-1.e-h-line-primary H1 Innoveren. Inspireren. Bewegen. Verder denken.
- *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     p.e-paragraph The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *     h2.e-h-2.e-h-line-primary H2 Pelckmans is toonaangevend wat didactische concepten betreft
- *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *     h3.e-h-3.e-h-line-primary H3 Pelckmans is toonaangevend wat didactische concepten betreft
- *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     p.e-paragraph The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *     h4.e-h-4.e-h-line-secondary Innoveren. Inspireren. Bewegen. Verder denken. H4
- *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     p.e-paragraph The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *     h5.e-h-5.e-h-line-secondary Innoveren. Inspireren. Bewegen. Verder denken. H5
- *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
- *     p.e-paragraph Dit kan alleen dankzij de kritische geest, de creativiteit en de sterke innovatieve cultuur die heersen binnen het bedrijf, bij de uitgevers en in de auteursgroepen.
+ *     p.e-paragraph The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+ *     p.e-paragraph The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *     h6.e-h-6 Innoveren. Inspireren. Bewegen. Verder denken. H6
- *     p.e-paragraph Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     p.e-paragraph The question is not can we build it? <a href="">We can ghpbuild</a>&nbsp; any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *     ul
  *         li Item 1
  *         li Item 2
@@ -170,10 +170,121 @@ a, .e-anchor {
     text-decoration: none;
     &:hover {
         color: $e-color-link-active;
+        &:after {
+            background: $e-color-link-active;
+        }
     }
 }
+
+p > a {
+    color: $e-color-primary;
+    position: relative;
+    &:after {
+        background: rgba($e-color-primary, .6);
+        bottom: 0px;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+}
+
 
 ul, .e-list--unorderd {
     list-style-position: inside;
     padding-left: 0;
+}
+
+
+/**
+ * Dynamic input:
+ * `.e-entry` <br>
+ *
+ *     @example
+ *     .e-entry
+ *         h1 Innoveren. Inspireren. Bewegen. Verder denken.
+ *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+ *         h2 Pelckmans is toonaangevend wat didactische concepten betreft
+ *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+ *         h3 H3 Pelckmans is toonaangevend wat didactische concepten betreft
+ *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+ *         h4 Innoveren. Inspireren. Bewegen. Verder denken. H4
+ *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+ *         h5 Innoveren. Inspireren. Bewegen. Verder denken. H5
+ *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+ *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+ *         h6 Innoveren. Inspireren. Bewegen. Verder denken. H6
+ *         p The question is not can we build it? We can <a href="">build</a>&nbsp;any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+ *         ul
+ *             li Item 1
+ *             li Item 2
+ *             li Item 3
+ *
+ */
+
+.e-entry {
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: normal;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: normal;
+        margin-bottom: .8rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: normal;
+        margin-bottom: .7rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+        line-height: normal;
+        margin-bottom: .6rem;
+    }
+    h5,
+    h6 {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+    p {
+        margin-bottom: .75rem;
+    }
+    ul {
+        //
+    }
+    li {
+        font-size: .9rem;
+        list-style: none;
+        position: relative;
+        margin-left: 1rem;
+        &:after {
+            background: $e-color-primary;
+            border-radius: 16px;
+            content: '';
+            height: 4px;
+            left: -1rem;
+            position: absolute;
+            top: .5rem;
+            width: 4px;
+        }
+    }
+    // p > a {
+    //     color: $e-color-primary;
+    //     position: relative;
+    //     &:after {
+    //         background: rgba($e-color-primary, .4);
+    //         bottom: 2px;
+    //         content: '';
+    //         height: 1px;
+    //         left: 0;
+    //         position: absolute;
+    //         width: 100%;
+    //     }
+    // }
 }
