@@ -17,9 +17,17 @@
  *       span button
  *     button.e-btn.e-btn--xlg
  *       span button
+ *     br
+ *     br
+ *     button.e-btn.e-btn--sm.e-btn--round
+ *       span button
+ *     button.e-btn.e-btn--round
+ *       span button
  *     button.e-btn.e-btn--lg.e-btn--round
  *       span button
- *     button.e-btn.e-btn--block
+ *     br
+ *     br
+ *     button.e-btn.e-btn--lg.e-btn--block
  *       span button
  *
  */
@@ -27,7 +35,7 @@
 // button-style mixin
 @mixin e-btn-style($color) {
     background: $color;
-    box-shadow: 0 2px 1px 0 #D1D1D1;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .15);
 
     @include e-transition(all .15s ease);
     transform: translateY(0px);
@@ -88,15 +96,15 @@
  * `.e-btn--disabled` <br>
  *
  *     @example
- *     a.e-btn.btn--info
+ *     a.e-btn.e-btn--info
  *       span info
- *     a.e-btn.btn--succes
+ *     a.e-btn.e-btn--succes
  *       span succes
- *     a.e-btn.btn--alert
+ *     a.e-btn.e-btn--alert
  *       span alert
- *     a.e-btn.btn--danger
+ *     a.e-btn.e-btn--danger
  *       span danger
- *     a.e-btn.btn--disabled
+ *     a.e-btn.e-btn--disabled
  *       span disabled
  */
 
@@ -113,13 +121,16 @@
 .e-btn--danger {
     @include e-btn-style($e-color-danger);
 }
-.e-btn--disabled,
-.e-btn--disabled:hover {
+.e-btn--disabled {
+    @include e-btn-style($e-color-disabled);
     transform: translateY(0px);
-    background: lighten($e-color-button, 20%);
-    box-shadow: 0 2px 0 0 darken(lighten($e-color-button, 20%), 5%);
-    color: lighten($e-color-tertiairy, 10%);
+    box-shadow: none;
     cursor: default;
+    &:hover {
+        background: $e-color-disabled;
+        box-shadow: none;
+        transform: translateY(0px);
+    }
 }
 .e-formbtn {
     @extend .e-btn;
