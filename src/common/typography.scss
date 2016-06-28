@@ -254,16 +254,18 @@ ul, .e-list--unorderd {
         margin-bottom: .5rem;
     }
     p {
+        @extend %e-paragraph;
         margin-bottom: .75rem;
     }
     ul {
         //
     }
     li {
+        @extend %e-paragraph;
         font-size: .9rem;
         list-style: none;
-        position: relative;
         margin-left: 1rem;
+        position: relative;
         &:after {
             background: $e-color-primary;
             border-radius: 16px;
@@ -275,17 +277,4 @@ ul, .e-list--unorderd {
             width: 4px;
         }
     }
-    // p > a {
-    //     color: $e-color-primary;
-    //     position: relative;
-    //     &:after {
-    //         background: rgba($e-color-primary, .4);
-    //         bottom: 2px;
-    //         content: '';
-    //         height: 1px;
-    //         left: 0;
-    //         position: absolute;
-    //         width: 100%;
-    //     }
-    // }
 }
