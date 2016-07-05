@@ -194,10 +194,16 @@ p > a {
     }
 }
 
-
 ul, .e-list--unorderd {
     list-style-position: inside;
     padding-left: 0;
+}
+
+ul.e-list--inline {
+    list-style-type: none;
+    li {
+        display: inline-block;
+    }
 }
 
 
