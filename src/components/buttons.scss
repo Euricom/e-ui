@@ -27,6 +27,10 @@
  *       span button
  *     br
  *     br
+ *     button.e-btn.e-btn--lg.e-btn--round.e-btn--outline
+ *       span button
+ *     br
+ *     br
  *     button.e-btn.e-btn--lg.e-btn--block
  *       span button
  *
@@ -90,6 +94,15 @@
     border-radius: 100px;
 }
 
+.e-btn--outline {
+    border: 1px solid $e-color-primary;
+    background: none;
+    &:hover {
+        background: $e-color-white;
+        border: 1px solid $e-color-white;
+        color: $e-color-primary;
+    }
+}
 /**
  * Button Styles :
  * `.e-btn--info` <br>
