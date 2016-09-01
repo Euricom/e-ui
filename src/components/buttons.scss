@@ -103,26 +103,30 @@
         color: $e-color-primary;
     }
 }
+
+
 /**
- * Button Styles :
- * `.e-btn--info` <br>
- * `.e-btn--succes` <br>
- * `.e-btn--alert` <br>
- * `.e-btn--danger` <br>
- * `.e-btn--disabled` <br>
- *
- *     @example
- *     a.e-btn.e-btn--info
- *       span info
- *     a.e-btn.e-btn--succes
- *       span succes
- *     a.e-btn.e-btn--alert
- *       span alert
- *     a.e-btn.e-btn--danger
- *       span danger
- *     a.e-btn.e-btn--disabled
- *       span disabled
- */
+* Button Styles :
+* `.e-btn--info` <br>
+* `.e-btn--succes` <br>
+* `.e-btn--alert` <br>
+* `.e-btn--danger` <br>
+* `.e-btn--disabled` <br>
+*
+*     @example
+*     a.e-btn.e-btn--info
+*       span info
+*     a.e-btn.e-btn--succes
+*       span succes
+*     a.e-btn.e-btn--alert
+*       span alert
+*     a.e-btn.e-btn--danger
+*       span danger
+*     a.e-btn.e-btn--disabled
+*       span disabled
+*     a.e-btn.e-btn--inverse
+*       span inverse
+*/
 
 // Modifiers
 .e-btn--info {
@@ -157,4 +161,9 @@
     @media (max-width: $e-breakpoint-medium){
         margin-top: 0;
     }
+}
+
+.e-btn--inverse {
+    background: #FFF;
+    color: #69BE28;
 }
