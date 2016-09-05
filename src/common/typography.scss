@@ -235,18 +235,12 @@ ul.e-list--inline {
 
 .e-entry {
     h1 {
-        font-size: 2rem;
-        font-weight: bold;
-        line-height: normal;
-        margin-bottom: 1rem;
-        margin-top: 1.8rem;
+        @include e-h-line(2rem);
+        @extend .e-h-line-primary;
     }
     h2 {
-        font-size: 1.6rem;
-        font-weight: bold;
-        line-height: normal;
-        margin-bottom: 1rem;
-        margin-top: 1.8rem;
+        @include e-h-line(2rem);
+        @extend .e-h-line-primary;
     }
     h3 {
         font-size: 1.4rem;
