@@ -237,11 +237,15 @@ ul.e-list--inline {
     h1 {
         @include e-h-line(2rem);
         @extend .e-h-line-primary;
+
+        margin-bottom: 2rem;
     }
     h2 {
         @include e-h-line(2rem, 16px, 1px);
         @extend .e-h-line-secondary;
+
         font-size: 2rem;
+        margin-bottom: 2rem;
     }
     h3 {
         font-size: 1.4rem;
