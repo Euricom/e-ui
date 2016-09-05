@@ -208,30 +208,35 @@ ul.e-list--inline {
 
 
 /**
- * Dynamic input:
- * `.e-entry` <br>
- *
- *     @example
- *     .e-entry
- *         h1 Innoveren. Inspireren. Bewegen. Verder denken.
- *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
- *         h2 Pelckmans is toonaangevend wat didactische concepten betreft
- *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
- *         h3 H3 Pelckmans is toonaangevend wat didactische concepten betreft
- *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
- *         h4 Innoveren. Inspireren. Bewegen. Verder denken. H4
- *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
- *         h5 Innoveren. Inspireren. Bewegen. Verder denken. H5
- *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
- *         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
- *         h6 Innoveren. Inspireren. Bewegen. Verder denken. H6
- *         p The question is not can we build it? We can <a href="">build</a>&nbsp;any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
- *         ul
- *             li Item 1
- *             li Item 2
- *             li Item 3
- *
- */
+* Dynamic input:
+* `.e-entry` <br>
+*
+*     @example
+*     .e-entry
+*         h1 Innoveren. Inspireren. Bewegen. Verder denken.
+*         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+*         h2 Pelckmans is toonaangevend wat didactische concepten betreft
+*         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+*         h3 H3 Pelckmans is toonaangevend wat didactische concepten betreft
+*         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+*         h4 Innoveren. Inspireren. Bewegen. Verder denken. H4
+*         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+*         h5 Innoveren. Inspireren. Bewegen. Verder denken. H5
+*         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+*         p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+*         h6 Innoveren. Inspireren. Bewegen. Verder denken. H6
+*         p The question is not can we build it? We can <a href="">build</a>&nbsp;any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+*         ul
+*             li Item 1
+*             li Item 2
+*             li Item 3
+*         p The question is not can we build it? We can <a href="">build</a>&nbsp;any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
+*         ol
+*             li Item 1
+*             li Item 2
+*             li Item 3
+*
+*/
 
 .e-entry {
     h1 {
@@ -269,18 +274,19 @@ ul.e-list--inline {
     p {
         @extend %e-paragraph;
         margin-bottom: 1rem;
-        line-height: 1.8rem;
+        line-height: 2rem;
+        font-size: 1.1rem;
     }
-    ul {
+    ul, ol {
         margin-bottom: 1.6rem;
     }
-    li {
+    ul li {
         @extend %e-paragraph;
         font-size: .9rem;
         list-style: none;
         margin-bottom: .5rem;
         margin-left: 1rem;
-        padding-left: .5rem;
+        padding-left: .2rem;
         position: relative;
         &:after {
             background: $e-color-primary;
@@ -291,6 +297,26 @@ ul.e-list--inline {
             position: absolute;
             top: calc(.5rem + 2px);;
             width: 4px;
+        }
+    }
+    ol {
+        margin-left: 0;
+        padding-left: 0;
+        list-style-type: none;
+    }
+    ol li {
+        @extend %e-paragraph;
+        counter-increment: step-counter;
+        margin-bottom: .5rem;
+        &:before {
+            background-color: $e-color-primary;
+            border-radius: 15px;
+            color: $e-color-white;
+            content: counter(step-counter);
+            font-size: 80%;
+            font-weight: bold;
+            margin-right: 1rem;
+            padding: 3px 8px;
         }
     }
 }
