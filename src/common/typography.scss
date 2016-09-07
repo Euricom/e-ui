@@ -240,6 +240,9 @@ ul.e-list--inline {
 */
 
 .e-entry {
+    * {
+        word-wrap: break-word;
+    }
     h1 {
         @include e-h-line(2rem);
         @extend .e-h-line-primary;
