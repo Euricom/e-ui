@@ -62,9 +62,7 @@ $e-grid-columns-margin-bottom: 1rem;
 // Container
 .e-container {
     @include e-make-container();
-    // @media (max-width: $e-breakpoint-medium){
-    //     padding: 0 2rem;
-    // }
+    padding: 0 2rem; //override
 }
 // Row
 .e-row {
