@@ -283,9 +283,12 @@ ul.e-list--inline {
     }
     ul li {
         @extend %e-paragraph;
-        font-size: .9rem;
+        margin-bottom: 1rem;
+        line-height: 2rem;
+        font-size: 1.1rem;
+        //font-size: .9rem;
         list-style: none;
-        margin-bottom: .5rem;
+        //margin-bottom: .5rem;
         margin-left: 1rem;
         padding-left: .2rem;
         position: relative;
@@ -296,7 +299,7 @@ ul.e-list--inline {
             height: 4px;
             left: -1rem;
             position: absolute;
-            top: calc(.5rem + 2px);;
+            top: calc(.7rem + 2px);;
             width: 4px;
         }
     }
