@@ -71,8 +71,8 @@ $e-sb: 1rem;
 $e-sr: 1.25;
 
 // set explicit line height
-$e-base-line-height: 1.3rem;
-$e-base-font-size: $e-sb;
+$e-base-line-height: 1.6rem;
+$e-base-font-size: $e-sb * 1.1;
 
 %e-h-1 {
     //($margin, $width, $height: 2px) {
@@ -157,7 +157,7 @@ h6, .e-h-6 {
 %e-paragraph {
     color: $e-color-text;
     font-size: $e-base-font-size;
-    line-height: 1.5rem;
+    line-height: $e-base-line-height;
     margin-bottom: $e-base-line-height;
     margin-top: 0;
 }
@@ -278,8 +278,8 @@ ul.e-list--inline {
     p {
         @extend %e-paragraph;
         margin-bottom: 1rem;
-        line-height: 2rem;
-        font-size: 1.1rem;
+        // line-height: 2rem;
+        // font-size: 1.1rem;
     }
     ul, ol {
         margin-bottom: 1.6rem;
