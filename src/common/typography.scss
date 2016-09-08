@@ -12,7 +12,7 @@
  *     @example
  *     h1.e-h-1.e-h-line-primary H1 Innoveren. Inspireren. Bewegen. Verder denken.
  *     p.e-paragraph The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
- *     h2.e-h-2.e-h-line-primary H2 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     h2.e-h-2.e-h-line-secondary H2 Pelckmans is toonaangevend wat didactische concepten betreft
  *     p The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *     h3.e-h-3.e-h-line-primary H3 Pelckmans is toonaangevend wat didactische concepten betreft
  *     p.e-paragraph The question is not can we build it? We can build any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
@@ -24,7 +24,7 @@
  *     h6.e-h-6 Innoveren. Inspireren. Bewegen. Verder denken. H6
  *     p.e-paragraph The question is not can we build it? <a href="">We can ghpbuild</a>&nbsp; any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *     ul
- *         li Item 1
+ *         li The question is not can we build it? <a href="">We can ghpbuild</a>&nbsp; any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
  *         li Item 2
  *         li Item 3
  *
@@ -82,29 +82,29 @@ $e-base-line-height: 1.7rem;
 
 %e-h-1 {
     //($margin, $width, $height: 2px) {
-    @include e-h-line( $e-base-line-height * 2,  $e-base-font-size * e-pow($e-sr, 5), 2px);
+    @include e-h-line( $e-base-line-height * 2, 3rem, 2px);
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 5);
     font-weight: 300;
-    line-height: $e-base-line-height * 3;
+    line-height: 4rem;
     margin-bottom: $e-base-line-height * 3.5;
 }
 
 %e-h-2 {
-    @include e-h-line( $e-base-line-height * 2, $e-base-font-size * e-pow($e-sr, 4), 2px );
+    @include e-h-line( $e-base-line-height * 2, 2rem, 1px );
     color: $e-color-title;
-    font-size: $e-base-font-size * e-pow($e-sr, 4);
+    font-size: 2.6rem;
     font-weight: 300;
-    line-height: $e-base-line-height * 2;
+    line-height: 3rem;
     margin-bottom: $e-base-line-height * 3;
 }
 
 %e-h-3 {
-    @include e-h-line( $e-base-line-height * 2,  $e-base-font-size * e-pow($e-sr, 3), 1px);
+    @include e-h-line( $e-base-line-height * 2,  1rem, 1px);
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 3);
     font-weight: 300;
-    line-height: $e-base-line-height * 2;
+    line-height: 2.6rem;
     margin-bottom: $e-base-line-height * 2;
 }
 
@@ -113,7 +113,7 @@ $e-base-line-height: 1.7rem;
     color: $e-color-title;
     font-size: $e-base-font-size * e-pow($e-sr, 2);
     font-weight: bold;
-    line-height: $e-base-line-height * 2;
+    line-height: 2.4rem;
     margin-bottom: $e-base-line-height;
 }
 
@@ -234,14 +234,14 @@ ul.e-list--inline {
 *         h6 Innoveren. Inspireren. Bewegen. Verder denken. H6
 *         p The question is not can we build it? We can <a href="">build</a>&nbsp;any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
 *         ul
-*             li Item 1
-*             li Item 2
-*             li Item 3
+*             li The question is not can we build it? We can type of business and organisation. Completely custom to meet your exact objectives.
+*             li The question is not can we build it? We can type of business and organisation. Completely custom to meet your exact objectives.
+*             li The question is not can we build it? We can type of business and organisation. Completely custom to meet your exact objectives.
 *         p The question is not can we build it? We can <a href="">build</a>&nbsp;any kind of application for any type of business and organisation. Completely custom to meet your exact objectives.
 *         ol
-*             li Item 1
-*             li Item 2
-*             li Item 3
+*             li The question is not can we build it? We can type of business and organisation. Completely custom to meet your exact objectives.
+*             li The question is not can we build it? We can type of business and organisation. Completely custom to meet your exact objectives.
+*             li The question is not can we build it? We can type of business and organisation. Completely custom to meet your exact objectives.
 *
 */
 
@@ -252,21 +252,17 @@ ul.e-list--inline {
     h1 {
         @include e-h-line(2rem);
         @extend .e-h-line-primary;
-
         margin-bottom: 2rem;
     }
     h2 {
         @include e-h-line(2rem, 16px, 1px);
         @extend .e-h-line-secondary;
-
-        font-size: 2rem;
         margin-bottom: 2rem;
     }
     h3 {
-        font-size: 1.4rem;
-        font-weight: bold;
-        line-height: normal;
-        margin-bottom: 1rem;
+        @include e-h-line(1.5rem, 12px, 1px);
+        @extend .e-h-line-secondary;
+        margin-bottom: 1.5rem;
         margin-top: 1.8rem;
     }
     h4 {
@@ -312,13 +308,15 @@ ul.e-list--inline {
     }
     ol {
         margin-left: 0;
-        padding-left: 0;
+        padding-left: 2.5rem;
+        position: relative;
         list-style-type: none;
     }
     ol li {
         @extend %e-paragraph;
         counter-increment: step-counter;
         margin-bottom: .5rem;
+
         &:before {
             background-color: $e-color-primary;
             border-radius: 15px;
@@ -326,8 +324,9 @@ ul.e-list--inline {
             content: counter(step-counter);
             font-size: 80%;
             font-weight: bold;
-            margin-right: 1rem;
-            padding: 3px 8px;
+            padding: 0px 9px;
+            position: absolute;
+            left: 0;
         }
     }
 }
