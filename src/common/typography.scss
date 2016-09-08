@@ -71,8 +71,8 @@ $e-sb: 1rem;
 $e-sr: 1.25;
 
 // set explicit line height
-$e-base-line-height: 1.6rem;
 $e-base-font-size: $e-sb * 1.1;
+$e-base-line-height: 1.7rem;
 
 %e-h-1 {
     //($margin, $width, $height: 2px) {
@@ -278,8 +278,6 @@ ul.e-list--inline {
     p {
         @extend %e-paragraph;
         margin-bottom: 1rem;
-        // line-height: 2rem;
-        // font-size: 1.1rem;
     }
     ul, ol {
         margin-bottom: 1.6rem;
