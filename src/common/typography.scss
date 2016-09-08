@@ -70,69 +70,69 @@
     }
 }
 
-// SCALE-BASE & SCALE-RATIO
-// more info about vertical rythm
-// https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm
-$e-sb: 1rem;
-$e-sr: 1.25;
 
 // set explicit line height
-$e-base-font-size: $e-sb * 1.1;
-$e-base-line-height: 2rem;
+$e-base-font-size: 1.1rem;
+$e-base-line-height: 1.85rem;
 
 %e-h-1 {
     //($margin, $width, $height: 2px) {
-    @include e-h-line( $e-base-line-height * 2, 3rem, 2px);
+    @include e-h-line( 4rem, 3rem, 2px);
     color: $e-color-title;
-    font-size: $e-base-font-size * e-pow($e-sr, 5);
+    font-size: 3.3rem;
     font-weight: 300;
     line-height: 4rem;
     margin-bottom: 4rem;
+    margin-top: 0;
 }
 
 %e-h-2 {
-    @include e-h-line( $e-base-line-height * 2, 2rem, 1px );
+    @include e-h-line( 3rem, 2rem, 1px );
     color: $e-color-title;
     font-size: 2.6rem;
     font-weight: 300;
     line-height: 3rem;
     margin-bottom: 4rem;
+    margin-top: 0;
 }
 
 %e-h-3 {
-    @include e-h-line( $e-base-line-height * 2,  1rem, 1px);
+    @include e-h-line( 2.6rem, 1rem, 1px);
     color: $e-color-title;
-    font-size: $e-base-font-size * e-pow($e-sr, 3);
+    font-size: 1.7rem;
     font-weight: 300;
     line-height: 2.6rem;
-    margin-bottom: $e-base-line-height * 2;
+    margin-bottom: 2.6rem;
+    margin-top: 0;
 }
 
 %e-h-4 {
-    @include e-h-line( $e-base-line-height, $e-base-font-size * e-pow($e-sr, 2), 1px );
+    @include e-h-line( 2.4rem, 1rem, 1px );
     color: $e-color-title;
-    font-size: $e-base-font-size * e-pow($e-sr, 2);
+    font-size: 1.7rem;
     font-weight: bold;
     line-height: 2.4rem;
-    margin-bottom: $e-base-line-height;
+    margin-bottom: 2.4rem;
+    margin-top: 0;
 }
 
 %e-h-5 {
-    @include e-h-line( $e-base-line-height, $e-base-font-size * $e-sr, 1px );
+    @include e-h-line( 2rem, 1rem, 1px );
     color: $e-color-title;
-    font-size: $e-base-font-size * $e-sr;
+    font-size: 1.4rem;
     font-weight: bold;
-    line-height: $e-base-line-height;
-    margin-bottom: $e-base-line-height;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 %e-h-6 {
-    @include e-h-line( $e-base-line-height, $e-base-font-size, 1px );
+    @include e-h-line( 2rem, 1.4rem, 1px );
     color: $e-color-title;
-    font-size: $e-base-font-size;
+    font-size: 1.2rem;
     font-weight: bold;
-    line-height: $e-base-line-height;
-    margin-bottom: $e-base-line-height;
+    line-height: 1rem;
+    margin-bottom: 1rem;
 }
 
 h1, .e-h-1 {
@@ -283,49 +283,55 @@ ul.e-list--inline {
     ul, ol {
         margin-bottom: 1.6rem;
     }
+    ul {
+        margin-left: 0;
+        padding-left: 3.5rem;
+        list-style-type: none;
+    }
     ul li {
         @extend %e-paragraph;
         margin-bottom: 1rem;
         line-height: 2rem;
         font-size: 1.1rem;
-        //font-size: .9rem;
         list-style: none;
-        //margin-bottom: .5rem;
-        margin-left: 1rem;
-        padding-left: .2rem;
         position: relative;
         &:after {
             background: $e-color-primary;
             border-radius: 16px;
             content: '';
-            height: 4px;
-            left: -1rem;
+            height: 3px;
+            left: -3.5rem;
             position: absolute;
             top: calc(.7rem + 2px);;
-            width: 4px;
+            width: 16px;
         }
     }
     ol {
         margin-left: 0;
-        padding-left: 2.5rem;
-        position: relative;
+        padding-left: 3.5rem;
         list-style-type: none;
     }
     ol li {
         @extend %e-paragraph;
         counter-increment: step-counter;
         margin-bottom: .5rem;
+        position: relative;
 
         &:before {
             background-color: $e-color-primary;
+            border: 4px solid $e-color-primary;
             border-radius: 15px;
             color: $e-color-white;
             content: counter(step-counter);
-            font-size: 80%;
+            font-size: .8rem;
             font-weight: bold;
-            padding: 0px 9px;
+            height: 20px;
+            left: -3.5rem; // equals padding on ol
+            line-height: 1.3rem;
             position: absolute;
-            left: 0;
+            text-align: center;
+            top: 4px;
+            width: 20px;
         }
     }
 }
