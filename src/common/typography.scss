@@ -319,8 +319,8 @@ ul.e-list--inline {
 
         &:before {
             background-color: $e-color-primary;
-            border: 4px solid $e-color-primary;
             border-radius: 15px;
+            box-shadow: 0 0 0px 3px $e-color-primary;
             color: $e-color-white;
             content: counter(step-counter);
             font-size: .8rem;
