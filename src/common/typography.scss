@@ -293,6 +293,7 @@ ul.e-list--inline {
         line-height: 2rem;
         font-size: 1.1rem;
         list-style: none;
+        margin-bottom: 0;
         position: relative;
         &:after {
             background: $e-color-primary;
