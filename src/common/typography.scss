@@ -285,8 +285,11 @@ ul.e-list--inline {
     }
     ul {
         margin-left: 0;
-        padding-left: 3.5rem;
+        padding-left: 2rem;
         list-style-type: none;
+        @media (min-width: $e-breakpoint-small){
+            padding-left: 3.5rem;
+        }
     }
     ul li {
         @extend %e-paragraph;
@@ -300,16 +303,24 @@ ul.e-list--inline {
             border-radius: 16px;
             content: '';
             height: 3px;
-            left: -3.5rem;
+            left: -2rem;
             position: absolute;
             top: 1rem;
             width: 10px;
         }
+        @media (min-width: $e-breakpoint-small){
+            &:after {
+                left: -3.5rem;
+            }
+        }
     }
     ol {
         margin-left: 0;
-        padding-left: 3.5rem;
+        padding-left: 2rem;
         list-style-type: none;
+        @media (min-width: $e-breakpoint-small){
+            padding-left: 3.5rem;
+        }
     }
     ol li {
         @extend %e-paragraph;
@@ -325,13 +336,20 @@ ul.e-list--inline {
             content: counter(step-counter);
             font-size: .8rem;
             font-weight: bold;
-            height: 20px;
-            left: -3.5rem; // equals padding on ol
+            height: 15px;
+            left: -2rem; // equals padding on ol
             line-height: 1.3rem;
             position: absolute;
             text-align: center;
             top: 4px;
-            width: 20px;
+            width: 15px;
+        }
+        @media (min-width: $e-breakpoint-small){
+            &:before {
+                width: 20px;
+                height: 20px;
+                left: -3.5rem;
+            }
         }
     }
 }
