@@ -287,7 +287,7 @@ ul.e-list--inline {
         margin-left: 0;
         padding-left: 2rem;
         list-style-type: none;
-        @media (min-width: $e-breakpoint-small){
+        @media (min-width: $e-breakpoint-medium){
             padding-left: 3.5rem;
         }
     }
@@ -308,7 +308,7 @@ ul.e-list--inline {
             top: 1rem;
             width: 10px;
         }
-        @media (min-width: $e-breakpoint-small){
+        @media (min-width: $e-breakpoint-medium){
             &:after {
                 left: -3.5rem;
             }
@@ -318,7 +318,7 @@ ul.e-list--inline {
         margin-left: 0;
         padding-left: 2rem;
         list-style-type: none;
-        @media (min-width: $e-breakpoint-small){
+        @media (min-width: $e-breakpoint-medium){
             padding-left: 3.5rem;
         }
     }
@@ -344,7 +344,7 @@ ul.e-list--inline {
             top: 4px;
             width: 15px;
         }
-        @media (min-width: $e-breakpoint-small){
+        @media (min-width: $e-breakpoint-medium){
             &:before {
                 width: 20px;
                 height: 20px;
