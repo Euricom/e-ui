@@ -1,39 +1,39 @@
 .e-left {
-    text-align: left;
+    text-align: left !important;
 }
 .e-right {
-    text-align: right;
+    text-align: right !important;
 }
 .e-center {
-    text-align: center;
+    text-align: center !important;
 }
 .e-inline {
-    display: inline-block;
+    display: inline-block !important;
 }
 .e-block {
-    display: block;
-    width: 100%;
+    display: block !important;
+    width: 100% !important;
 }
 .e-clearfix {
     @include e-clearfix();
 }
 .e-fl--right {
-    float: right;
+    float: right !important;
 }
 .e-fl--left {
-    float: left;
+    float: left !important;
 }
 
 .e-no-margin {
-    margin: 0px;
+    margin: 0px !important;
 }
 .e-no-margin-bottom {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
 }
 
 .e-no-padding {
-    padding: 0px;
+    padding: 0px !important;
 }
 .e-no-padding-bottom {
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
 }
