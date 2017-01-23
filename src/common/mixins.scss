@@ -64,3 +64,68 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* -------------------------------- */
+/* -------- SPACERS --------------- */
+/* -------------------------------- */
+// creates extra helper/utility-classes to influence spacing(margin/padding)
+// eg .xs-mb-15
+
+// margin and padding values array
+$space-values : ( 0, 1, 2, 3, 4, 6, 8, 10) !default;
+
+// margin and padding shorthands
+$space-prefixes : (
+        p  : padding,
+        pt : padding-top,
+        pr : padding-right,
+        pb : padding-bottom,
+        pl : padding-left,
+        m  : margin,
+        mt : margin-top,
+        mr : margin-right,
+        mb : margin-bottom,
+        ml : margin-left,
+) !default;
+
+// change these values if its not imported into bootstrap
+$breakpoints: (
+        xs: 0, // Extra small screen / phone
+        sm: $e-breakpoint-small, //480px // Small screen / phone
+        md: $e-breakpoint-medium, //768px // Medium screen / tablet
+        lg: $e-breakpoint-large, // Large screen / desktop
+        xl: $e-breakpoint-xlarge //1024px // Extra large screen / wide desktop
+) !default;
+
+
+// main function definition
+@mixin make-space($values, $prefixes, $breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // if xs value = 0, set it global without media queries
+    @if($breakpoint-value == 0) {
+      @each $attr-short, $attr-long in $prefixes {
+        @each $value in $values {
+          .#{$breakpoint-name}-#{$attr-short}-#{$value} {
+            #{$attr-long}: calc(#{$value} * .5rem;
+          }
+        }
+      }
+    }
+      // breakpoint values that not equal to 0
+    @else {
+      @media screen and (min-width: $breakpoint-value) {
+        @each $attr-short, $attr-long in $prefixes {
+          @each $value in $values {
+            // eg.
+            .#{$breakpoint-name}-#{$attr-short}-#{$value} {
+              #{$attr-long}: calc(#{$value} * .5rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @include make-space($space-values, $space-prefixes, $breakpoints);
+

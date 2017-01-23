@@ -37,3 +37,19 @@
 .e-no-padding-bottom {
     padding-bottom: 0px !important;
 }
+
+@include make-space($space-values, $space-prefixes, $breakpoints);
+
+// TODO move to helpers
+.only-mobile {
+  @media (min-width: $e-breakpoint-small) {
+    display: none !important;
+  }
+}
+
+.hide-mobile {
+  display: none !important;
+  @media (min-width: $e-breakpoint-small) {
+    display: block !important;
+  }
+}
