@@ -1,0 +1,20 @@
+/** <h2 class="sg-h2" id="Divider">Divider</h2> */
+
+/**
+* divider:
+* `.e-divider`
+*
+*     @example
+*     .e-paragraph Straffe developers met goede communicatieskills gaan samen ...
+*     .e-divider
+*     .e-paragraph Straffe developers met goede communicatieskills gaan samen ...
+*/
+
+.e-divider {
+    background: $e-color-divider;
+    display: block;
+    float: left;
+    height: 1px;
+    margin-bottom: 1.3rem;
+    width: 100%;
+}

@@ -383,6 +383,27 @@
       </section>
     </section>
 
+    <section class="sg-section sg-section-Divider">
+      <h2 class="sg-h2 sg" id="Divider">Divider</h2>
+      <section class="sg-block sg-section-divider">
+        <div class="sg-text">
+          <h3 id="divider" class="sg">divider</h3>
+          <p class="sg">
+            <code class="sg">.e-divider</code>
+          </p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="e-paragraph">Straffe developers met goede communicatieskills gaan samen ...</div>
+            <div class="e-divider"></div>
+            <div class="e-paragraph">Straffe developers met goede communicatieskills gaan samen ...</div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-paragraph&quot;</span>&gt;</span>Straffe developers met goede communicatieskills gaan samen ...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-paragraph&quot;</span>&gt;</span>Straffe developers met goede communicatieskills gaan samen ...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+        </div>
+      </section>
+    </section>
+
     <section class="sg-section sg-section-undefined">
       <h2 class="sg-h2 sg">Forms</h2>
       <section class="sg-block sg-section-text-number-inputs">
@@ -588,23 +609,33 @@
           <div class="sg-canvas">
             <div class="e-container">
               <form>
-                <div class="e-row">
-                  <div class="e-col-8">
+                <div class="e-row e-no-margin-bottom">
+                  <div class="e-col-12">
                     <label>Label (default height)</label>
+                  </div>
+                  <div class="e-col-10">
                     <input type="text" name="title">
                   </div>
-                  <div class="e-col-4">
+                  <div class="e-col-2">
                     <div class="e-formbtn">send</div>
                   </div>
-                  <div class="e-col-8">
+                </div>
+                <div class="e-row e-no-margin-bottom">
+                  <div class="e-col-12">
                     <label>.e-input--sm</label>
+                  </div>
+                  <div class="e-col-8">
                     <input type="text" name="title" class="e-input--sm">
                   </div>
                   <div class="e-col-4">
-                    <div class="e-formbtn e-btn--sm">send</div>
+                    <div class="e-formbtn e-btn--sm e-btn--block">send</div>
+                  </div>
+                </div>
+                <div class="e-row e-no-margin-bottom">
+                  <div class="e-col-12">
+                    <label>.e-input--lg</label>
                   </div>
                   <div class="e-col-8">
-                    <label>.e-input--lg</label>
                     <input type="text" name="title" class="e-input--lg">
                   </div>
                   <div class="e-col-4">
@@ -615,23 +646,33 @@
             </div>
           </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-container&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-row&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-row e-no-margin-bottom&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-12&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label (default height)<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-10&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;title&quot;</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-4&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-2&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-formbtn&quot;</span>&gt;</span>send<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-row e-no-margin-bottom&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-12&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>.e-input--sm<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-8&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;title&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-input--sm&quot;</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-4&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-formbtn e-btn--sm&quot;</span>&gt;</span>send<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-formbtn e-btn--sm e-btn--block&quot;</span>&gt;</span>send<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-row e-no-margin-bottom&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-12&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>.e-input--lg<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-8&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>.e-input--lg<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;title&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-input--lg&quot;</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-4&quot;</span>&gt;</span>

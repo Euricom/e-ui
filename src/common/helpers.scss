@@ -49,7 +49,7 @@
 
 .hide-mobile {
   display: none !important;
-  @media (min-width: $e-breakpoint-small) {
+  @media (min-width: $e-breakpoint-small) { 
     display: block !important;
   }
 }

@@ -84,19 +84,24 @@
  *     @example
  *     div.e-container
  *         form
- *             div.e-row
- *                 div.e-col-8
+ *             div.e-row.e-no-margin-bottom
+ *                 div.e-col-12
  *                     label Label (default height)
+ *                 div.e-col-10
  *                     input(type="text", name="title", class="")
- *                 div.e-col-4
+ *                 div.e-col-2
  *                     .e-formbtn send
- *                 div.e-col-8
+ *             div.e-row.e-no-margin-bottom
+ *                 div.e-col-12
  *                     label .e-input--sm
+ *                 div.e-col-8
  *                     input.e-input--sm(type="text", name="title", class="")
  *                 div.e-col-4
- *                     .e-formbtn.e-btn--sm send
- *                 div.e-col-8
+ *                     .e-formbtn.e-btn--sm.e-btn--block send
+  *             div.e-row.e-no-margin-bottom
+ *                 div.e-col-12
  *                     label .e-input--lg
+ *                 div.e-col-8
  *                     input.e-input--lg(type="text", name="title", class="")
  *                 div.e-col-4
  *                     .e-formbtn.e-btn--lg send
