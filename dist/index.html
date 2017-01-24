@@ -553,14 +553,20 @@
         </div>
         <div class="sg-example">
           <div class="sg-canvas">
-            <form>
-              <label>Select Menu
-                <select>
-                  <option value="value_1">value 1</option>
-                  <option value="value_2">value 2</option>
-                  <option value="value_2">value 3</option>
-                </select>
-              </label>
+            <div class="e-container">
+              <form>
+                <div class="e-row">
+                  <div class="e-col-12">
+                    <label>Select Menu
+                      <select>
+                        <option value="value_1">value 1</option>
+                        <option value="value_2">value 2</option>
+                        <option value="value_2">value 3</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+              </form>
               <div class="e-row">
                 <div class="e-col-3">
                   <label class="e-inline e-right">Inline Select Menu</label>
@@ -573,15 +579,21 @@
                   </select>
                 </div>
               </div>
-            </form>
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Select Menu
-    <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;value_1&quot;</span>&gt;</span>value 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;value_2&quot;</span>&gt;</span>value 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;value_2&quot;</span>&gt;</span>value 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+            </div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-12&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Select Menu
+          <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;value_1&quot;</span>&gt;</span>value 1<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;value_2&quot;</span>&gt;</span>value 2<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;value_2&quot;</span>&gt;</span>value 3<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-row&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-col-3&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;e-inline e-right&quot;</span>&gt;</span>Inline Select Menu<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
@@ -594,7 +606,7 @@
       <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
         </div>
       </section>
       <section class="sg-block sg-section-inputs-buttons">

@@ -60,16 +60,19 @@
 * Use `.e-right.e-inline` for inline labels<br>
 *
 *     @example
-*     form
-*         label Select Menu
-*             select
-*                 option(value="value_1") value 1
-*                 option(value="value_2") value 2
-*                 option(value="value_2") value 3
+*     div.e-container
+*         form
+*             div.e-row
+*                 .e-col-12
+*                     label Select Menu
+*                         select
+*                             option(value="value_1") value 1
+*                             option(value="value_2") value 2
+*                             option(value="value_2") value 3
 *         div.e-row
-*             div.e-col-3
+*             .e-col-3
 *                 label.e-inline.e-right Inline Select Menu
-*             div.e-col-9
+*             .e-col-9
 *                 select
 *                     option(value="value_1") value 1
 *                     option(value="value_2") value 2
