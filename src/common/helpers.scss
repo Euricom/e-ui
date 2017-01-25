@@ -46,8 +46,6 @@
     padding-bottom: 0px !important;
 }
 
-@include make-space($space-values, $space-prefixes, $breakpoints);
-
 // TODO move to helpers
 .only-mobile {
   @media (min-width: $e-breakpoint-small) {
