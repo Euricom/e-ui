@@ -16,6 +16,7 @@
     border-radius: 3px;
     cursor: pointer;
     display: block;
+    margin-bottom: 1rem;
     padding: 1.5rem 2rem;
     @include e-transition(all .15s ease);
     transform: translateY(0px);
