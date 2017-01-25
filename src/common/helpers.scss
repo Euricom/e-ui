@@ -24,6 +24,7 @@
 }
 .e-clearfix {
     @include e-clearfix();
+}
 
 .e-fl--right {
     float: right !important;
