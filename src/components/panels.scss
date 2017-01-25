@@ -1,0 +1,26 @@
+/** <h2 class="sg-h2">Panels</h2> */
+
+/**
+ * Panel sizes:
+ * `.e-panel` <br>
+ *
+ *     @example
+ *     .e-panel 
+ *         p.e-no-margin-bottom Panelcontent   
+ *
+ */
+
+ .e-panel {
+    background: $e-color-white;
+    border: 1px solid $e-color-border;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    padding: 1.5rem 2rem;
+    @include e-transition(all .15s ease);
+    transform: translateY(0px);
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px -4px rgba($e-color-text, .5);
+    }
+ }
